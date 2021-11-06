@@ -1,5 +1,6 @@
 import 'package:componentes/src/pages/Animation.dart';
 import 'package:componentes/src/pages/Pin_code.dart';
+import 'package:componentes/src/pages/forumulario_parcial.dart';
 import 'package:componentes/src/pages/foto_animacion.dart';
 import 'package:flutter/material.dart';
 
@@ -25,5 +26,6 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'animation': (BuildContext context) => AnimationScreen(),
     'pincode': (BuildContext context) => pin_code(),
     'fotoanimada': (BuildContext context) => fotoanimada(),
+    'formulario': (BuildContext context) => Formulario(),
   };
 }

@@ -8,10 +8,16 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+TextEditingController nombre_controller = TextEditingController();
+TextEditingController email_controller = TextEditingController();
+TextEditingController fecha_controller = TextEditingController();
+
+
 
   String _nombre = '';
   String _email  = '';
   String _fecha  = '';
+  String data  = '';
 
   String _opcionSeleccionada = 'Volar';
 
@@ -38,7 +44,20 @@ class _InputPageState extends State<InputPage> {
           Divider(),
           _crearDropdown(),
           Divider(),
-          _crearPersona()
+          _crearPersona(),
+          Divider(),
+          ElevatedButton(
+          onPressed: () {
+            setState(() {
+              data=nombre_controller.text; 
+            });
+           
+           },
+           child: Text('Looks like a RaisedButton'),
+),
+        Text(data),
+
+
         ],
       ),
     );
@@ -48,6 +67,7 @@ class _InputPageState extends State<InputPage> {
 
     return TextField(
       // autofocus: true,
+      controller: nombre_controller,
       textCapitalization: TextCapitalization.sentences,
       decoration: InputDecoration(
         border: OutlineInputBorder(
@@ -72,6 +92,7 @@ class _InputPageState extends State<InputPage> {
   Widget _crearEmail() {
 
     return TextField(
+      controller: email_controller,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         border: OutlineInputBorder(
@@ -92,6 +113,7 @@ class _InputPageState extends State<InputPage> {
   Widget _crearPassword(){
 
      return TextField(
+       controller: fecha_controller,
       obscureText: true,
       decoration: InputDecoration(
         border: OutlineInputBorder(
@@ -108,7 +130,7 @@ class _InputPageState extends State<InputPage> {
     );
 
   }
-
+  
 
   Widget _crearFecha( BuildContext context ) {
 
