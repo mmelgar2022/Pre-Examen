@@ -10,6 +10,7 @@ final _icons = <String, IconData>{
   'tune': Icons.tune,
   'load': Icons.circle,
   'pin': Icons.password,
+  'cita': Icons.text_snippet_rounded, 
 };
 
 Icon getIcon(String nombreIcono) {
