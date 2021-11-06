@@ -50,7 +50,13 @@
             "ruta" : "fotoanimada",
             "icon" : "pin",
             "texto": "Foto Animada"
+        },
+        {
+            "ruta" : "formulario",
+            "icon" : "",
+            "texto": "Formnulario Consulta Medica"
         }
+        
         
     ]
 }
